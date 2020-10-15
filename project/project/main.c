@@ -8,18 +8,23 @@
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
+void f(void);
+int i;
 
-    int i;
-    
-    for (i=0;i<5;i++)
+int main(void)
+{
+    for(i=0;i<5;i++)
     {
-       int temp = 1;
-        printf("temp = %i\n", temp);
-        temp++;
         
+        f();
     }
-
-    
     return 0;
+}
+
+void f(void)
+{
+    
+    for(i=0;i<10;i++)
+        printf("#");
+
 }
